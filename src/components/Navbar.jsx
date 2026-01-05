@@ -70,7 +70,7 @@ export default function Navbar() {
             <div className='flex flex-col text-5xl gap-y-2 md:text-6xl lg:text-7xl '>
                 {content.map((c, index) => (
                     <div ref={(el) => linksRef.current[index] = el}>
-                        <Link href="" className='hover:text-white transition-all duration-300'>{c}</Link>
+                        <Link href={`${content[index]}`} className='hover:text-white transition-all duration-300'>{c}</Link>
                     </div>
                     
                 ) )}
