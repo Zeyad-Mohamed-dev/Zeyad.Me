@@ -11,6 +11,7 @@ import { useMediaQuery } from 'react-responsive';
 export default function Hero() {
     const contextRef = useRef(null);
     const headerRef = useRef(null);
+    const smHeaderRef = useRef(null);
     const isSmall = useMediaQuery({maxWidth: 850});
     useGSAP(() => {
         const tl = gsap.timeline();
@@ -25,6 +26,12 @@ export default function Hero() {
             duration: 1,
             ease: "circ.out"
         }, "<+0.2")
+
+        tl.from(smHeaderRef.current, {
+            y: "-200",
+            opacity: 0,
+            duration: 1
+        })
     })
     return (
     <section id='home' className='flex flex-col justify-end min-h-screen'>
@@ -32,17 +39,26 @@ export default function Hero() {
             <div style={{clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)", overflow: "hidden"}}>
                 <div 
                 ref={headerRef}
-                className='flex flex-col justify-center pt-12'>
+                className='flex flex-row justify-between items-center pt-12'>
                     <div className='px-10'>
                         <h1 className='uppercase banner-text-responsive text-4xl md:text-6xl'>
                             Zeyad Mohamed
                         </h1>
                     </div>
+                    
                 </div>
                 
             </div>
             <div className='relative px-10 text-black'>
                     <div className='absolute inset-x-0 border-t-2 border-black'/>
+                    <div style={{clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)", overflow: "hidden"}}>
+                        <div className='block md:block px-10' ref={smHeaderRef}>
+                        <h1 className='uppercase md:text-3xl'>
+                            Fullstack developer
+                        </h1>
+                    </div>
+                    </div>
+                    
                     <div className='py-12 flex justify-end'>
                         <AnimatedTextLines body={`Engineering the future of digital interaction. 
                         Currently focused on mastering full-stack ecosystems and creating high-impact web applications for the modern era.`}

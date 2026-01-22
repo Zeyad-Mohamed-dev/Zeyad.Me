@@ -60,6 +60,19 @@ export default function Navbar() {
             ease: "power2.out"
         }, "<"), []
     }, [])
+
+    const handleScrolling = (e) => {
+        e.preventDefault();
+        toggleNav();
+
+        tl.current.eventCallback("onReverseComplete", () => {
+      scroller.scrollTo(c, {
+        duration: 600,
+        smooth: "easeInOutQuart",
+        offset: -80,
+      });
+    });
+    }
   return (
     <>
     
@@ -70,7 +83,12 @@ export default function Navbar() {
             <div className='flex flex-col text-5xl gap-y-2 md:text-6xl lg:text-7xl '>
                 {content.map((c, index) => (
                     <div ref={(el) => linksRef.current[index] = el}>
-                        <Link href={`${content[index]}`} className='hover:text-white transition-all duration-300'>{c}</Link>
+                        <Link to={content[index]}
+                        smooth={true}
+                        duration={600}
+                        
+                        onClick={handleScrolling}
+  className='hover:text-white cursor-pointer transition-all duration-300'>{c}</Link>
                     </div>
                     
                 ) )}
