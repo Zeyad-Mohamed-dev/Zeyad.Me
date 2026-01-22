@@ -88,10 +88,7 @@ export default function Services() {
     key={index}
     ref={(el) => (servicesGridRef.current[index] = el)}
     className="sticky bg-black text-white border-t-2 border-white/30"
-    style={isDesktop ? 
-      {top: `calc(10vh + ${index * 5})rem`,
-      marginBottom: `${(services.length - index - 1) * 5} rem`
-    }: { top: "0"}}
+    style={ { top: "0"}}
 
   >
     <div className="px-10 md:px-16 pt-12 pb-16">
