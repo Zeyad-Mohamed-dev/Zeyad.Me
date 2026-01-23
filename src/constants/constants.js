@@ -10,22 +10,21 @@ export const socials = [
 ]
 
 export const projects = [
+    
     {
         id: 1,
-        title: "Portfolio Website",
-        description: "A personal portfolio website to showcase my projects and skills.",
-        link: ""
+        title: "Gemsy - Places discovery platform",
+        description: "A web application that helps users discover and explore various places of interest, such as restaurants, parks, and landmarks. Built with React and Tailwind CSS, it features an intuitive UI and seamless navigation. with embedded maps and user reviews. providing dashboard for place owners to manage listings and view analytics.",
+        link: "",
+        tools: ["React", "Tailwind", "MotionFramer", "Node.js", "Express", "MongoDB"],
+        img: "/gemsy.png"
     },
     {
-        id: 1,
-        title: "Portfolio Website",
-        description: "A personal portfolio website to showcase my projects and skills.",
-        link: ""
-    },
-    {
-        id: 1,
-        title: "Portfolio Website",
-        description: "A personal portfolio website to showcase my projects and skills.",
-        link: ""
+        id: 2,
+        title: "Gemsy - Places discovery platform",
+        description: "A web application that helps users discover and explore various places of interest, such as restaurants, parks, and landmarks. Built with React and Tailwind CSS, it features an intuitive UI and seamless navigation. with embedded maps and user reviews. providing dashboard for place owners to manage listings and view analytics.",
+        link: "",
+        tools: ["React", "Tailwind", "MotionFramer", "Node.js", "Express", "MongoDB"],
+        img: "/gemsy.png"
     },
 ]
