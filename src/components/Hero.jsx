@@ -7,6 +7,7 @@ import { Environment, Float, Lightformer, MeshTransmissionMaterial } from '@reac
 import { Planet } from '../Animation/Planet';
 import { AmbientLight } from 'three';
 import { useMediaQuery } from 'react-responsive';
+import { StarCursorTrail } from './StarCursorTrail';
 
 export default function Hero() {
     const contextRef = useRef(null);
@@ -34,7 +35,8 @@ export default function Hero() {
         })
     })
     return (
-    <section id='home' className='flex flex-col justify-end min-h-screen'>
+    <section id='home' className='flex flex-col justify-end min-h-screen '>
+        <StarCursorTrail />
         <div ref={contextRef}>
             <div style={{clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)", overflow: "hidden"}}>
                 <div 

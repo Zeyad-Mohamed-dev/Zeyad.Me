@@ -8,7 +8,7 @@ export default function Services() {
   const sectionRef = useRef(null);
   const titleRef = useRef(null);
   const servicesGridRef = useRef([]);
-  const isDesktop = useMediaQuery({minWidth: "48rem"})
+  // const isDesktop = useMediaQuery({minWidth: "48rem"})
 
   const services = [
     {
