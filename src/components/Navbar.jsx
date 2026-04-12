@@ -100,7 +100,7 @@ export default function Navbar() {
             className='flex flex-col md:flex-row flex-wrap justify-between gap-8'>
                 <div className='font-light'>
                     <p className='text-white/50'>Email</p>
-                    <p className='text-xl lowercase text-pretty'>ziadmohomar123@gmail.com</p>
+                    <p className='text-xl lowercase text-pretty'>zeyadmohamedabdelfatah123@gmail.com</p>
                 </div>
 
                 <div className='font-light'>
@@ -109,6 +109,8 @@ export default function Navbar() {
                         {socials.map((social, index) => (
                             <a 
                             key={index}
+                            target="_blank"
+                            rel="noopener noreferrer"
                             className='hover:text-white uppercase transition-colors duration-300' href={social.url}>{social.name}</a>
                         ))}
                     </div>

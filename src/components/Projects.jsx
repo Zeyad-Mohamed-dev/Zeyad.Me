@@ -48,7 +48,7 @@ const mouse = useRef({x: 0, y: 0});
     moveY.current(mouse.current.y);
   }
   return (
-    <section id="projects" className="min-h-screen flex flex-col">
+    <section id="projects" className="flex flex-col">
       <SectionHeader
         title="Projects"
         description="Explore my latest projects and see how I bring ideas to life."
