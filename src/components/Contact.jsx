@@ -5,6 +5,7 @@ import { Icon } from "@iconify/react";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { useForm, ValidationError } from "@formspree/react";
+import Marquee from "./Marquee";
 
 export default function Contact() {
   const containerRef = useRef(null);
@@ -28,9 +29,6 @@ export default function Contact() {
     },
   ];
 
-  const handleInputChange = (e) => {
-  };
-
   useGSAP(() => {
     gsap.from(".contact-item", {
       y: 30,
@@ -42,12 +40,15 @@ export default function Contact() {
   }, { scope: containerRef });
 
   return (
-    <section id="contact" ref={containerRef} className="min-h-screen flex flex-col bg-white">
+    <section id="contact" ref={containerRef} className="flex flex-col bg-white">
+
+      <Marquee items={["React", "JavaScript", "Node.js", "NestJS", "MongoDB", "PostgreSQL", "Tailwind CSS", "REST APIs"]} className="text-white bg-black" />
       <SectionHeader
         title="Get in Touch"
         description="Have a project in mind or want to collaborate? I'd love to hear from you."
       />
 
+      
       <div className="flex flex-col lg:flex-row gap-12 px-10 pb-20">
         <div className="flex flex-col gap-8 lg:w-1/2">
           <div className="contact-item">

@@ -27,7 +27,13 @@ export default function Services() {
       title: "Full-Stack Solutions",
       description:
         "Delivering end-to-end applications from database design to UI implementation. Seamless integration across all layers of the stack.",
-      tools: [ "App Router", "Docker", "Vercel"],
+      tools: ["App Router", "Docker", "Vercel"],
+    },
+    {
+      title: "AI Integration",
+      description:
+        "Incorporating intelligent features using machine learning models and AI-powered services.",
+      tools: ["OpenAI", "LangChain", "Vector DB", "Python"],
     },
     {
       title: "Performance Optimization",
